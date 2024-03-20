@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--=====================Favicon link=====================-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!--=====================Custom css link=====================-->
+    <link rel="stylesheet" href="/Code files/style.css" />
+
+    <title>Frontend Mentor | Crowdfunding product page</title>
+  </head>
+  <body>
+    <!--===========Overlay============-->
+
+    <div class="overlay" data-overlay></div>
+
+    <!--===========Header==============-->
+
+    <header class="header" data-header>
+      <div class="wrapper-container flex-space-between">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="" />
+        </div>
+
+        <nav class="navbar clr-black" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="" class="navbar-link" data-nav-link> About </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="" class="navbar-link" data-nav-link> Discover </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="" class="navbar-link" data-nav-link>Get Started </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle-btn" data-nav-toggler>
+          <img src="/images/icon-hamburger.svg" alt="" class="open-menu" />
+
+          <img src="/images/icon-close-menu.svg" alt="" class="close-menu" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!--==============Hero Section============== -->
+
+        <section class="section hero has-bg-image"></section>
+
+        
+        <div class="wrapper-container">
+
+        <!--============Main container================ -->
+        
+        <div class="main_container">
+
+          <div class=" mastercraft_logo has-bg-image"></div>
+
+
+          <!---==========Call to action=======-->
+
+          <section class="call_to_action section">
+            <h2 class="section_title text-center">
+              Mastercraft Bamboo Monitor Riser
+            </h2>
+
+            <p class="section_text text-center clr-light">
+              A beautiful & handcrafted monitor stand to reduce neck and eye
+              strain.
+            </p>
+
+            <div class="wrapper flex-space-between">
+              <button class="btn btn-primary">Back this project</button>
+
+              <div class="card-badge">
+                <img src="/images/icon-bookmark.svg" alt="" class="img-cover" />
+              </div>
+            </div>
+          </section>
+
+          <!---==========Progress=======-->
+
+          <section class="section progress">
+            <ul class="progress-list">
+              <li>
+                <div class="progress-card">
+                  <h1 class="card-title text-center">
+                    <span data-total-funds>$89,914</span>
+                  </h1>
+
+                  <p class="progress-subtitle clr-light text-center">
+                    of 100,000 backed
+                  </p>
+                </div>
+              </li>
+
+              <div class="seperator"></div>
+
+              <li>
+                <div class="progress-card">
+                  <h1 class="card-title text-center">
+                    <span data-total-backers>5007</span>
+                  </h1>
+
+                  <p class="progress-subtitle clr-light text-center">
+                    total backers
+                  </p>
+                </div>
+              </li>
+
+              <div class="seperator"></div>
+
+              <li>
+                <div class="progress-card">
+                  <h1 class="card-title text-center">
+                    <span data-days-left>56</span>
+                  </h1>
+
+                  <p class="progress-subtitle clr-light text-center">
+                    days left
+                  </p>
+                </div>
+              </li>
+
+              <div class="progress-bar" data-progress-bar></div>
+            </ul>
+          </section>
+
+          <!---==========About=======-->
+
+          <section class="about section">
+            <h1 class="section-title">About this project</h1>
+
+            <p class="section_text clr-light">
+              The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+              platform that elevates your screen to a more comfortable viewing
+              height. Placing your monitor at eye level has the potential to
+              improve your posture and make you more comfortable while at work,
+              helping you stay focused on the task at hand.
+            </p>
+
+            <p class="section_text clr-light">
+              Featuring artisan craftsmanship, the simplicity of design creates
+              extra desk space below your computer to allow notepads, pens, and
+              USB sticks to be stored under the stand.
+            </p>
+
+            <ul class="about-list grid">
+              <li>
+                <div class="about_card">
+                  <div class="card-content">
+                    <h2 class="about_card_title">Bamboo Stand</h2>
+
+                    <p class="about_subtitle clr_cyan">Pledge $25 or more</p>
+
+                    <p class="section_text clr-light">
+                      You get an ergonomic stand made of natural bamboo. You've
+                      helped us launch our promotional campaign, and you’ll be
+                      added to a special Backer member list.
+                    </p>
+                  </div>
+
+                <div>
+                  <div class="about_wrapper flex-items-center">
+                    <h1 class="card-title">101</h1>
+
+                    <span class="span clr-light section_text">left</span>
+                  </div>
+
+                  <button class="btn about_btn">Select Reward</button>
+                </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="about_card">
+                  <div class="card-content">
+                    <h2 class="about_card_title">Black Edition Stand</h2>
+
+                    <p class="about_subtitle clr_cyan">Pledge $75 or more</p>
+
+                    <p class="section_text clr-light">
+                      You get two Special Edition Mahogany stands, a Backer
+                      T-Shirt, and a personal thank you. You’ll be added to our
+                      Backer member list. Shipping is included. 0 left
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="about_wrapper flex-items-center">
+                      <h1 class="card-title">101</h1>
+
+                      <span class="span clr-light section_text">left</span>
+                    </div>
+
+                    <button class="btn about_btn">Select Reward</button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="faded">
+                <div class="about_card ">
+                  <div class="card-content">
+                    <h2 class="about_card_title">Mahogany Special Edition</h2>
+
+                    <p class="about_subtitle clr_cyan">
+                      Mahogany Special Edition
+                    </p>
+
+                    <p class="section_text clr-light">
+                      You get two Special Edition Mahogany stands, a Backer
+                      T-Shirt, and a personal thank you. You’ll be added to our
+                      Backer member list. Shipping is included.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="about_wrapper flex-items-center">
+                      <h1 class="card-title">0</h1>
+
+                      <span class="span clr-light section_text">left</span>
+                    </div>
+
+                    <button class="about_btn btn btn-secondary">
+                      Out of Stock
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      </article>
+    </main>
+
+    <!--=================Custom script link========================-->
+
+    <script src="/Code files/script.js"></script>
+  </body>
+</html>
