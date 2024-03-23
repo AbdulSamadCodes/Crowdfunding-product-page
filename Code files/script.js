@@ -41,7 +41,9 @@ headerScroll();
 //=========Modal toggle======
 
 const selectionModal = document.querySelector("[data-selection-modal]");
+const successModal = document.querySelector("[data-success-modal]");
 const overlay = document.querySelector("[data-overlay]");
+const successModalSubmit = document.querySelector("[data-success-modal-btn]");
 const selectionModalBtn = document.querySelector("[data-back-project]");
 
 function placeModal(modal){
@@ -70,10 +72,11 @@ toggleModal(selectionModalBtn,selectionModal);
 
 const pledgeSubmits = document.querySelectorAll("[data-pledge-submit-btn]");
 const pledgeHandlers = document.querySelectorAll("[data-pledge-handler]");
+const pledgeHandlerCards = document.querySelectorAll("[data-has-pledge-form]")
+const markers = document.querySelectorAll("[data-marker]");
 
 function showPledgeCard(){
   const pledgeToggle = document.querySelectorAll("[data-check-label]");
-  const markers = document.querySelectorAll("[data-marker]");
   const pledgeHandlerCards = document.querySelectorAll("[data-has-pledge-form]");
 
   pledgeToggle.forEach((toggleBtn , index) => {
@@ -89,7 +92,7 @@ function showPledgeCard(){
 
 showPledgeCard();
 
-//Function to parse the textContent of elemnts in number
+//Function to parse the textContent of elements in number
 
 function parseTextContent(element){
  let textContent = element.textContent;
@@ -102,16 +105,25 @@ function parseTextContent(element){
  }
 }
 
-//============Function to update the page data 
+//=========Function to update the page data 
 
 function updateData(){
   let totalFunds = document.querySelector("[data-total-funds]");
   let totalBackers = document.querySelector("[data-total-backers]");
   let daysLeft = document.querySelector("[data-days-left]");
   const pledgesLeft = document.querySelectorAll("[data-pledges-left]");
-  
+  const inputFields = document.querySelectorAll("[data-pledge-input]");
+
   let totalFundsAmount = parseTextContent(totalFunds);
   totalFundsAmount++;
+
+  inputFields.forEach((input) => {
+    if(input.value){
+      let inputValue = parseInt(input.value);
+      totalFundsAmount+=inputValue;
+    }
+  })
+
   let formattedTotalFunds = totalFundsAmount.toLocaleString(2);
   totalFunds.textContent = formattedTotalFunds;
 
@@ -124,13 +136,43 @@ function updateData(){
     pledgesLeftCounter--;
     pledge.textContent = pledgesLeftCounter ; 
   })
-  
 }
 
 pledgeSubmits.forEach((submit,index) => {
   submit.addEventListener("click",() => {
     updateData();
     pledgeHandlers[index].classList.remove("active");
+    markers[index].style.backgroundColor = "#fff";
+    pledgeHandlerCards[index].style.borderColor = "#fff";
+
     selectionModal.close();
+    successModal.showModal();
   })
 })
+
+successModalSubmit.addEventListener("click",() => {
+  successModal.close();
+})
+
+//====Handling  hero background on desktop and mobile screen size
+
+function changeBackground()
+{
+  const heroSection = document.querySelector("[data-heroSection]");
+  const mobileUrl = "/images/image-hero-mobile.jpg";
+  const heroUrl = heroSection.dataset.desktopbgurl;
+
+  if(window.innerWidth > 768){
+    heroSection.style.backgroundImage = `url("${heroUrl}")` 
+  }else{
+    heroSection.style.backgroundImage = `url("${mobileUrl}")`     
+  }
+}
+
+window.addEventListener("resize" ,changeBackground);
+window.addEventListener("load" , changeBackground);
+
+
+
+
+

@@ -55,7 +55,11 @@
       <article>
         <!--==============Hero Section============== -->
 
-        <section class="section hero has-bg-image"></section>
+        <section
+          class="section hero has-bg-image"
+          data-desktopBgUrl="/images/image-hero-desktop.jpg"
+          data-heroSection
+        ></section>
 
         <div class="wrapper-container">
           <!--============Main container================ -->
@@ -104,9 +108,9 @@
                       of 100,000 backed
                     </p>
                   </div>
-                </li>
 
-                <div class="seperator"></div>
+                  <div class="seperator"></div>
+                </li>
 
                 <li>
                   <div class="progress-card">
@@ -118,9 +122,9 @@
                       total backers
                     </p>
                   </div>
-                </li>
 
-                <div class="seperator"></div>
+                  <div class="seperator"></div>
+                </li>
 
                 <li>
                   <div class="progress-card">
@@ -133,9 +137,9 @@
                     </p>
                   </div>
                 </li>
-
-                <div class="progress-bar" data-progress-bar></div>
               </ul>
+
+              <div class="progress-bar" data-progress-bar></div>
             </section>
 
             <!---==========About=======-->
@@ -242,7 +246,7 @@
               </ul>
             </section>
 
-            <!--==========Selection odal=============-->
+            <!--==========Selection modal=============-->
 
             <dialog class="selection-modal modal" data-selection-modal>
               <h2 class="section_title">Back this project</h2>
@@ -253,7 +257,6 @@
               </p>
 
               <ul class="pledge_list grid">
-
                 <li>
                   <div class="pledge_card">
                     <div class="wrapper flex-items-center">
@@ -281,7 +284,6 @@
 
                 <li>
                   <div class="pledge_card" data-has-pledge-form>
-
                     <div class="wrapper flex-items-center">
                       <label for="check" class="check-label" data-check-label>
                         <input
@@ -295,14 +297,12 @@
                       </label>
 
                       <div>
+                        <h2 class="about_card_title">Bamboo Stand</h2>
 
-                      <h2 class="about_card_title">Bamboo Stand</h2>
-
-                      <p class= "about_subtitle clr_cyan">Pledge $75 or more
-                      </p>
-
+                        <p class="about_subtitle clr_cyan">
+                          Pledge $75 or more
+                        </p>
                       </div>
-
                     </div>
 
                     <p class="section_text clr-light">
@@ -319,32 +319,33 @@
                     </div>
 
                     <div class="pledge-handler" data-pledge-handler>
-
                       <p class="clr-light section_text text-center">
                         Enter your pledge
                       </p>
 
                       <div class="flex-items-center">
+                        <input
+                          type="text"
+                          class="input_field"
+                          data-pledge-input
+                          placeholder="$ 25"
+                        />
 
-                        <input type="text"class="input_field" data-pledge-input placeholder="$ 25">
-
-                        <button class="pledge_submit_btn btn" data-pledge-submit-btn>
+                        <button
+                          class="pledge_submit_btn btn"
+                          data-pledge-submit-btn
+                        >
                           Continue
                         </button>
-
                       </div>
-
                     </div>
-
-
                   </div>
                 </li>
 
                 <li>
                   <div class="pledge_card" data-has-pledge-form>
-
                     <div class="wrapper flex-items-center">
-                      <label for="check" class="check-label" data-check-label >
+                      <label for="check" class="check-label" data-check-label>
                         <input
                           type="checkbox"
                           name=""
@@ -356,44 +357,47 @@
                       </label>
 
                       <div>
+                        <h2 class="about_card_title">Black Edition Stand</h2>
 
-                      <h2 class="about_card_title">Black Edition Stand</h2>
-
-                      <p class= "about_subtitle clr_cyan">Pledge $75 or more
-                      </p>
-
-                    </div>
+                        <p class="about_subtitle clr_cyan">
+                          Pledge $75 or more
+                        </p>
+                      </div>
                     </div>
 
                     <p class="section_text clr-light">
-                      You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-                       member list. Shipping is included.
+                      You get a Black Special Edition computer stand and a
+                      personal thank you. You’ll be added to our Backer member
+                      list. Shipping is included.
                     </p>
 
                     <div class="wrapper flex-items-center">
-                      <h1 class="card-title"data-pledges-left>64</h1>
+                      <h1 class="card-title" data-pledges-left>64</h1>
 
                       <span class="span clr-light section_text">left</span>
                     </div>
 
                     <div class="pledge-handler" data-pledge-handler>
-
                       <p class="clr-light section_text text-center">
                         Enter your pledge
                       </p>
 
                       <div class="flex-items-center">
+                        <input
+                          type="text"
+                          class="input_field"
+                          data-pledge-input
+                          placeholder="$ 75"
+                        />
 
-                       <input type="text"class="input_field" data-pledge-input placeholder="$ 75">
-
-                        <button class="pledge_submit_btn btn" data-pledge-submit-btn>
+                        <button
+                          class="pledge_submit_btn btn"
+                          data-pledge-submit-btn
+                        >
                           Continue
                         </button>
-
                       </div>
-
                     </div>
-
                   </div>
                 </li>
 
@@ -412,14 +416,14 @@
                       </label>
 
                       <div>
-                          
-                      <h2 class="about_card_title">Mahogany Special Edition</h2>
+                        <h2 class="about_card_title">
+                          Mahogany Special Edition
+                        </h2>
 
-                      
-                      <p class= "about_subtitle clr_cyan">Pledge $200 or more
-                      </p>
-
-                    </div>
+                        <p class="about_subtitle clr_cyan">
+                          Pledge $200 or more
+                        </p>
+                      </div>
                     </div>
 
                     <p class="section_text clr-light">
@@ -429,17 +433,32 @@
                     </p>
 
                     <div class="wrapper flex-items-center">
-                      <h1 class="card-title"data-pledges-count >0</h1>
+                      <h1 class="card-title" data-pledges-count>0</h1>
 
                       <span class="span clr-light section_text">left</span>
                     </div>
                   </div>
                 </li>
-  
               </ul>
             </dialog>
 
+            <!--==========Success  modal=============-->
 
+            <dialog class="modal success-modal text-center" data-success-modal>
+              <img src="/images/icon-check.svg" alt="" />
+
+              <h2 class="section_title">Thanks for your support!</h2>
+
+              <p class="section_text clr-light">
+                Your pledge brings us one step closer to sharing Mastercraft
+                Bamboo Monitor Riser worldwide. You will get an email once our
+                campaign is completed.
+              </p>
+
+              <button class="btn btn-primary" data-success-modal-btn>
+                Got it!
+              </button>
+            </dialog>
           </div>
         </div>
       </article>

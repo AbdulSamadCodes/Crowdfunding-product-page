@@ -72,10 +72,14 @@ html {
   font-family: var(--font-family-Commissioner);
 }
 
+dialog {
+  scrollbar-width: thin;
+}
+
 /*=========================Reused styles===========================*/
 
 .wrapper-container {
-  padding-inline: 16px;
+  padding: 18px 16px;
 }
 
 .flex-space-between {
@@ -186,6 +190,10 @@ html {
   border: 1px solid #c9c7c78e;
 }
 
+dialog::backdrop {
+  background-color: var(--gray-15);
+}
+
 /*=========================Main styles===========================*/
 
 .header {
@@ -200,16 +208,11 @@ html {
   background-color: var(--black);
 }
 
-.header .wrapper-container {
-  padding-block: 18px;
-}
-
 .navbar {
   position: fixed;
   top: 70px;
-  left: 20px;
   right: 20px;
-  max-width: 360px;
+  width: min(360px, 80%);
   background-color: var(--white);
   border-radius: 8px;
   z-index: 10;
@@ -313,7 +316,7 @@ html {
   font-weight: 500;
 }
 
-.progress-card  .card-title span{
+.progress-card .card-title span {
   display: inline-block;
 }
 
@@ -370,10 +373,6 @@ html {
   padding: 25px 20px;
 }
 
-.selection-modal::backdrop {
-  background-color: var(--gray-15);
-}
-
 .check-label {
   position: relative;
   width: 20px;
@@ -404,36 +403,126 @@ html {
 }
 
 .pledge-handler {
-  padding-block:15px;
+  padding-block: 15px;
   border-block-start: 1px solid #c9c7c78e;
   display: none;
 }
 
-.pledge-handler.active{
-  display: block; 
+.pledge-handler.active {
+  display: block;
 }
 
 .pledge-handler > div {
   justify-content: space-around;
   flex-wrap: wrap;
-  gap:8px;
+  gap: 8px;
 }
 
-.input_field{
+.input_field {
   padding: 13px 30px;
   border: 1px solid #c9c7c78e;
   border-radius: 20px;
   transition: border-color 0.5s ease-out;
-  max-width:90px;
+  max-width: 90px;
 }
 
 .input_field:is(:hover, :focus) {
   border-color: var(--moderate_cyan);
 }
 
-.input_field::placeholder{
-  color:var(--black);
+.input_field::placeholder {
+  color: var(--black);
   font-weight: 700;
 }
 
+/*==========Success modal===========*/
 
+.success-modal {
+  position: absolute;
+  width: 350px;
+  border: unset;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  padding: 30px 25px;
+}
+
+.success-modal .btn,
+.success-modal img {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.success-modal img {
+  margin-block-end: 15px;
+}
+
+/*===================Media queries==================*/
+
+/*====Responsive for devices more than 768px==*/
+
+@media (min-width: 768px) {
+  .main_container,
+  .selection-modal {
+    max-width: 550px;
+  }
+
+  .progress-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about_card > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/*====Responsive for devices more than 992px==*/
+
+@media (min-width: 992px) {
+  :root {
+    --fs-1: 25px;
+    --fs-2: 17px;
+  }
+
+  .main_container,
+  .selection-modal {
+    max-width: 700px;
+  }
+
+  .success-modal {
+    width: 420px;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .header .wrapper-container {
+    padding: 30px 45px;
+  }
+
+  .header.active .wrapper-container {
+    padding-block: 15px;
+  }
+
+  .navbar,
+  .navbar-list {
+    all: unset;
+  }
+
+  .navbar-list {
+    display: flex;
+  }
+
+  .navbar-list {
+    color: var(--white);
+  }
+
+  .navbar-item:not(.navbar-item:last-child) {
+    border-block-end: none;
+  }
+}
